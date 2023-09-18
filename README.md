@@ -1,9 +1,3 @@
 # CornerstoneRides
 
-# First time setup
-
-## Install Python
-
-1) Download here: https://www.python.org/downloads/
-2) Select 'Add Python x.xx to PATH'
-3) 
+https://docs.google.com/document/d/1IipRqL50Vpck7euAb9KV8eZzgAUX8WTCs6bfzYbnazo/edit?usp=sharing
