@@ -1,1 +1,3 @@
 # CornerstoneRides
+
+# First time setup
