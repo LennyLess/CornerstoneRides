@@ -221,14 +221,22 @@ if __name__ == "__main__":
 
                 if option == 1:
                     passenger_df.loc[len(passenger_df.index)] = [name, phone, pickup]
+                    passenger_count += 1
+                    if pickup in location_df["Location"].unique():
+                        location_df.loc[
+                            location_df["Location"] == pickup, "Passengers"
+                        ] += 1
+                    else:
+                        location_df.loc[len(location_df.index)] = [pickup, 1]
                 else:
-                    seats = input("Enter number of seats: ")
+                    seats = int(input("Enter number of seats: "))
                     driver_df.loc[len(driver_df.index)] = [
                         name,
                         phone,
                         pickup,
                         seats,
                     ]
+                    seat_total += seats
 
     while seat_total < passenger_count:
         email = ST_DRIVERS.pop(0)
@@ -331,6 +339,11 @@ if __name__ == "__main__":
         passenger_df = passenger_df.sort_values(by=["Pickup", "Name"])
         driver_df = driver_df.sort_values(by=["Seats", "Name"], ascending=False)
         location_df = location_df.sort_values(by=["Passengers"], ascending=False)
+
+        print(passenger_df)
+        print(driver_df)
+        print(location_df)
+        _ = input("ready for next iteration")
 
     print("Available Drivers")
     print(driver_df)
