@@ -12,8 +12,12 @@ pd.options.mode.chained_assignment = None
 
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
+# List of drivers on servants team:
+# Add email based on directory
+# Van and mini-van go first
+# Place worship team last in order
 ST_DRIVERS = [
-    "nfoord@purdue.edu",
+    "nfoord@purdue.edu", 
     "fan316@purdue.edu",
     "iclee@purdue.edu",
     "deng247@purdue.edu",
@@ -22,6 +26,8 @@ ST_DRIVERS = [
     "llwan@purdue.edu",
 ]
 
+# Default pickup locations
+# Add/remove as needed
 PICKUP_LOCATIONS = set(
     [
         "aspire",
@@ -35,7 +41,7 @@ PICKUP_LOCATIONS = set(
     ]
 )
 
-
+# Reads data from google sheets
 def read_data(SAMPLE_SPREADSHEET_ID_input):
     SAMPLE_RANGE_NAME = "A1:AA1000"
 
@@ -65,7 +71,7 @@ def read_data(SAMPLE_SPREADSHEET_ID_input):
 
     return values_input
 
-
+# Gets sheet ID from google sheet link
 def get_link_id(link):
     result = re.search(r"^https://docs\.google\.com/spreadsheets/d/(.*)/.*$", link)
 
