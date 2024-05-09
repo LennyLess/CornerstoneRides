@@ -16,10 +16,10 @@ ST_DRIVERS = [
     "nfoord@purdue.edu",
     "fan316@purdue.edu",
     "iclee@purdue.edu",
-    "park1345@purdue.edu",
-    "llwan@purdue.edu",
     "deng247@purdue.edu",
     "fong22@purdue.edu",
+    "park1345@purdue.edu",
+    "llwan@purdue.edu",
 ]
 
 PICKUP_LOCATIONS = set(
