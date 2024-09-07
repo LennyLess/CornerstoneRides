@@ -17,13 +17,14 @@ SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 # Van and mini-van go first
 # Place worship team last in order
 ST_DRIVERS = [
-    "nfoord@purdue.edu", 
-    "fan316@purdue.edu",
+    "huan1628@purdue.edu",
     "iclee@purdue.edu",
-    "deng247@purdue.edu",
     "fong22@purdue.edu",
+    "park1536@purdue.edu",
+    "richa644@purdue.edu",
     "park1345@purdue.edu",
-    "llwan@purdue.edu",
+    "deng247@purdue.edu",
+    "yu1162@purdue.edu",
 ]
 
 # Default pickup locations
@@ -250,6 +251,7 @@ if __name__ == "__main__":
         name = person_info.iloc[0]["What is your name? (First and Last)"]
         phone = person_info.iloc[0]["Phone number (Format: 123-456-7890)"]
         pickup = person_info.iloc[0]["Best Pickup Location"]
+        print(name)
         seats = int(
             person_info.iloc[0][
                 "If the answer to the above question is yes / maybe, how many people can you drive (not including yourself)"
